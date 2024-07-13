@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 5px;
+}
+
+.alertFinPesage {
+  background-color: #7bed9f;
+  padding: 2px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}
+
+header {
+  padding: auto;
+  margin-top: 40px;
+  p {
+    background-color: rgb(25, 25, 25);
+    padding: 10px;
+    margin: auto;
+    color: azure;
+    text-align: center;
+  }
+  .logo {
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+main {
+  .etape-pesage {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    .etape {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      i {
+        font-size: 40px;
+      }
+
+      .etat {
+        font-size: small;
+        font-weight: bold;
+      }
+    }
+  }
+  .donnee-paramettres {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 4fr;
+    grid-gap: 25px;
+    margin: 2%;
+    .date input,
+    .poids input,
+    .message input {
+      width: 100%;
+      background-color: #dfe4ea;
+    }
+  }
+
+  .donnee-pesage {
+    margin: 0px 10px 0px 10px;
+    .title {
+      text-align: center;
+      padding: 10px;
+      color: black;
+      font-size: 18px;
+    }
+    .card {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      border: 1px black solid;
+
+      .card-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1%;
+        grid-gap: 100px;
+
+        table {
+          table-layout: auto;
+          border-collapse: collapse;
+
+          tr {
+            border-top: solid 1px #ced6e0;
+          }
+          td {
+            padding: 10px;
+            input {
+              background-color: #dfe4ea;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  margin-top: 40px;
+  padding: 4px;
+  max-width: 40%;
+  border-top: solid 1px gray;
+  input {
+    padding: 5px;
+  }
+  #password {
+    margin: 0px 15px 0px 100px;
+  }
+
+  #params-button {
+    background: #1e90ff;
+    color: white;
+  }
+}
+
+input {
+  padding: 5px;
+  border: #a4b0be 1px solid;
+  border-radius: 2.5px;
+}
+
+.loader {
+  border: 1px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1px solid #57606f;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+
+  p{
+    text-align: center;
+  }
+  div{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+  }
+  
+}
+
+/* The Close Button */
+.close {
+  color: #ff4757;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.yes {
+  color: #1e90ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.yes:hover,
+.yes:focus {
+  color: #70a1ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff6b81;
+  text-decoration: none;
+  cursor: pointer;
+}

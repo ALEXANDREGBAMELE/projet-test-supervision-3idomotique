@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centre de supervision</title>
+    <link rel="stylesheet" href="./asserts/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body>
+    <!-- alert de fin de pessage avec succès -->
+    <div class="alertFinPesage">
+      FIN DE PESAGE
+    </div>
+    <!-- L'entête de la page -->
+    <header>
+      <p>Centre de supervision d'une station pesage automatique  <!-- Trigger/Open The Modal -->
+        <input type="button" id="myBtn" value="TESTER">
+        </p>
+      <div class="logo"><img src="./asserts/img/logo.jpg" alt="Logo" height="80" />  </div>
+    </header>
+
+    <!-- Le corps principale -->
+    <main>
+      <div class="etape-pesage">
+        <div class="etape">
+          <div class="label">Borne détection présence</div>
+          <i id="etat-borne-detection" class="fa-solid fa-xmark"></i>
+          <div class="etat"> </div>
+        </div>
+        <div class="etape">
+          <div class="labelle">Feu bicolore</div>
+          <i class="fa-solid fa-xmark"></i>
+          <div class="etat">HORS SERVICE</div>
+        </div>
+        <div class="etape">
+          <div class="labelle">Bariere automatique</div>
+          <i class="fa-solid fa-xmark"></i>
+          <div class="etat">HORS SERVICE</div>
+        </div>
+        <div class="etape">
+          <div class="labelle">Barriere Gabarit</div>
+          <i class="fa-solid fa-xmark"></i>
+          <div class="etat">HORS SERVICE</div>
+        </div>
+        <div class="etape">
+          <div class="labelle">Panneau Gabarit</div>
+          <i class="fa-solid fa-xmark"></i>
+          <div class="etat">HORS SERVICE</div>
+        </div>
+        <div class="etape">
+          <div class="label">Capteur fin Pesée</div>
+          <i class="fa-solid fa-xmark"></i>
+          <div class="etat">HORS SERVICE</div>
+        </div>
+      </div>
+
+      <div class="donnee-paramettres">
+        <div class="mode-pesage">
+          <label for="">Mode de passage : </label> <br>
+          <input type="radio" name="mode-pesage" id="" /> Pesage automatique
+          <input type="radio" name="mode-pesage" id="" /> Pesage manuel
+        </div>
+        <div class="date">
+            <label for="">Date et Heure</label><br>
+            <input class="date1" type="text" name="" id="">
+            <div class="loader"></div>
+        </div>
+        <div class="poids">
+          <label for="">Poids essieu (Kg)  </label><br>
+          <input class="poidsEssieu" type="text" name="" id="">
+          <div class="loader"></div>
+        </div>
+        <div class="message">
+          <label for="">Message d'Alarme</label><br>
+          <input class="alert" type="text" name="" id="" />
+          <div class="loader"></div>
+        </div>
+      </div>
+      <div class="donnee-pesage">
+        <div class="title">
+          <i class="fa-solid fa-backward-fast"></i> Données de Pesage
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <table>
+              <tr class="table-row">
+                <td>Date et Heure :</td>
+                <td>
+                  <input class="date2" type="text" />
+                </td>
+              </tr>
+              <tr>
+                <td>Numéro de pesée :</td>
+                <td>
+                  <input class="numepese" type="text" />
+                </td>
+              </tr>
+              <tr>
+                <td>Classe véhicule :</td>
+                <td>
+                  <input class="categoryVehi" type="text" />
+                </td>
+              </tr>
+              <tr>
+                <td>Longueur :</td>
+                <td>
+                  <input class="longueur" type="text" />
+                </td>
+              </tr>
+            </table>
+  
+            <table>
+              <tr>
+                <td>Poids Total :</td>
+                <td>
+                  <input class="poindsTotal" type="text" />
+                </td>
+              </tr>
+              <tr>
+                <td>Poids Surchage :</td>
+                <td>
+                  <input class="surchage" type="text" />
+                </td>
+              </tr>
+              <tr>
+                <td>Infraction Gabarit :</td>
+                <td>
+                  <input class="infractionGabarit" type="text" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Le pied de page -->
+    <center>
+      <footer>
+        <input
+          type="button"
+          name=""
+          id="params-button"
+          value=" Configuration des paramettres "
+        />
+        <input type="text" name="" id="password" placeholder="Password" />
+        <input type="button" value="Ok" />
+      </footer>
+    </center>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <!-- <span class="close">&times;</span> -->
+    <p>Bonjour , Voulez-vous faire un test de simulation de pesé ?</p>
+    <div class=".button-container"> <i id="yes" onclick="onClickYes()" class="yes fa-regular fa-thumbs-up"></i> <i id="close" class=" close fa-regular fa-thumbs-down"></i> </div>
+  </div>
+  
+</div>
+
+  
+    <script src="./asserts/js/script.js"></script>
+  </body>
+</html>
