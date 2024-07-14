@@ -9,7 +9,7 @@ const poidsEssieu = document.querySelector(".poids .poidsEssieu");
 const messageAlert = document.querySelector(".message .alert");
 let currentDateTime = "---";
 date1.value = currentDateTime;
-poidsEssieu.value = "0 kg";
+poidsEssieu.value = "---";
 messageAlert.value = "---";
 
 let barriereDetection,
@@ -28,12 +28,12 @@ const infractionGabarit = document.querySelector("td input.infractionGabarit");
 // const icon = document.querySelector("i").style.color = '#ff4757';
 
 date2.value = currentDateTime;
-numPese.value = "0 kg";
+numPese.value = "---";
 categoryVehi.value = "---";
-longueur.value = "0 mm";
-poindsTotal.value = "0 kg";
-surchage.value = "0";
-infractionGabarit.value = "0";
+longueur.value = "---";
+poindsTotal.value = "---";
+surchage.value = "---";
+infractionGabarit.value = "---";
 
 // Storage Data
 
@@ -46,7 +46,6 @@ function save() {
     localStorage.setItem("nbrePese", ` ${nbrePese} `);
   }
 }
-function get() {}
 
 let loaders = document.querySelectorAll(".loader");
 let etatBorneDetection = document.querySelectorAll(".fa-xmark");
@@ -78,26 +77,20 @@ conditionAlert
   ? (alertFinPesage.style.display = "block")
   : (alertFinPesage.style.display = "none");
 
-// Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -156,16 +149,16 @@ async function onClickYes() {
 
   let currentDateTime = formattedDate;
   date1.value = currentDateTime;
-  poidsEssieu.value = "0 kg";
-  messageAlert.value = "---";
+  poidsEssieu.value = "4500 kg";
+  messageAlert.value = "Ce vehicule est en surpoids";
 
   date2.value = currentDateTime;
-  numPese.value = "0 kg";
-  categoryVehi.value = "---";
-  longueur.value = "0 mm";
-  poindsTotal.value = "0 kg";
-  surchage.value = "0";
-  infractionGabarit.value = "0";
+  numPese.value = "PA001";
+  categoryVehi.value = "P11";
+  longueur.value = "4200 mm";
+  poindsTotal.value = "15600 kg";
+  surchage.value = "600 kg";
+  infractionGabarit.value = "---";
 
   save();
 

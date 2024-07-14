@@ -57,6 +57,7 @@ main {
     grid-template-columns: 4fr 2fr 2fr 4fr;
     grid-gap: 25px;
     margin: 2%;
+    
     .date input,
     .poids input,
     .message input {
@@ -72,6 +73,11 @@ main {
       padding: 10px;
       color: black;
       font-size: 18px;
+
+      .fa-backward-fast{
+        color: #747d8c;
+        font-size: small;
+      }
     }
     .card {
       display: flex;
@@ -119,6 +125,11 @@ footer {
     background: #1e90ff;
     color: white;
   }
+  #okButton{
+    background-color: #747d8c;
+    color: white;
+  }
+  
 }
 
 input {
